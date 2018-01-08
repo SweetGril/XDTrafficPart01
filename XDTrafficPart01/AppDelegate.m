@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,8 +17,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AMapServices sharedServices].apiKey =  [NSString stringWithFormat:@"%@",@"7c97e3be11edd1be8865acdbe183d3c6"];
+  
+    [self startLocation];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    ViewController *vc =[[ViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+//    if ([XDClientManager shareInstance].messageDelegate ==nil) {
+//        [XDClientManager shareInstance].messageDelegate = self;
+//        [[XDClientManager shareInstance]loginWithIp:@"4things.cn" port:1883 isAutoConnect:false isAutoConnectCount:19 clientID:[XDUserManager sharedInstance].userClientId];
+//    }
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -48,6 +62,45 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+//定位代理经纬度回调
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *newLocation = locations[0];
+    [XDClloctionManager sharedManager].nowPoint = [newLocation marsCoordinate];
+//    [XDClloctionManager sharedManager].nowPoint = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    [manager stopUpdatingLocation];
+}
+
+#pragma mark - CLLocationManagerDelegate
+// 地理位置发生改变时触发
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    [XDClloctionManager sharedManager].nowPoint = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+     [manager stopUpdatingLocation];
+}
+
+- (void)startLocation {
+    if ([CLLocationManager locationServicesEnabled]) {
+        self.locationManager = [[CLLocationManager alloc]init];
+        self.locationManager.delegate = self;
+        //控制定位精度,越高耗电量越
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        // 总是授权
+        [self.locationManager requestAlwaysAuthorization];
+        self.locationManager.distanceFilter = 100.0f;
+        [self.locationManager startUpdatingLocation];
+    }
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+     [XDClloctionManager sharedManager].nowPoint = CLLocationCoordinate2DMake(39.9046900000, 116.4071700000);
+    if ([error code] == kCLErrorDenied) {
+        NSLog(@"访问被拒绝");
+    }
+    if ([error code] == kCLErrorLocationUnknown) {
+        NSLog(@"无法获取位置信息");
+    }
+}
+
 
 
 #pragma mark - Core Data stack

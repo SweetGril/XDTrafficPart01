@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38597A0A2003151E00D10275 /* XDPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A092003151E00D10275 /* XDPersonViewController.m */; };
+		38597A0E20031A7300D10275 /* XDDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A0D20031A7300D10275 /* XDDeviceManager.m */; };
+		38597A1220031BA300D10275 /* XDNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A1120031BA300D10275 /* XDNetWork.m */; };
+		38597A162003374F00D10275 /* XDUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A152003374F00D10275 /* XDUserManager.m */; };
+		38597A1C20033DD900D10275 /* EquipmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A1A20033DD900D10275 /* EquipmentModel.m */; };
+		38597A1F20033EE100D10275 /* XDClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A1D20033EE100D10275 /* XDClientManager.m */; };
+		38597A2220033F0700D10275 /* MQTTStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A2020033F0600D10275 /* MQTTStatus.m */; };
+		38597A2620033F4300D10275 /* XDMsgDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A2420033F4300D10275 /* XDMsgDispose.m */; };
+		38597A2820033F7700D10275 /* XDMqttMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A2720033F7700D10275 /* XDMqttMessage.m */; };
+		38597A2C20033FC600D10275 /* FunBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A2B20033FC600D10275 /* FunBox.m */; };
+		38597A302003537D00D10275 /* XDMAPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A2F2003537D00D10275 /* XDMAPointAnnotation.m */; };
+		38597A342003554700D10275 /* XDVehicleAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A322003554600D10275 /* XDVehicleAnnotationView.m */; };
+		38597A372003557600D10275 /* XDCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A352003557600D10275 /* XDCustomCalloutView.m */; };
+		38597A3B200355EC00D10275 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A3A200355EB00D10275 /* UIColor+Hex.m */; };
 		38B423021FFF65F3003D2C45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423011FFF65F3003D2C45 /* AppDelegate.m */; };
 		38B423051FFF65F3003D2C45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423041FFF65F3003D2C45 /* ViewController.m */; };
-		38B423081FFF65F3003D2C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B423061FFF65F3003D2C45 /* Main.storyboard */; };
 		38B4230B1FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38B423091FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld */; };
 		38B4230D1FFF65F3003D2C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B4230C1FFF65F3003D2C45 /* Assets.xcassets */; };
 		38B423101FFF65F3003D2C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4230E1FFF65F3003D2C45 /* LaunchScreen.storyboard */; };
 		38B423131FFF65F3003D2C45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423121FFF65F3003D2C45 /* main.m */; };
 		38B4231D1FFF65F3003D2C45 /* XDTrafficPart01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B4231C1FFF65F3003D2C45 /* XDTrafficPart01Tests.m */; };
 		38B423281FFF65F3003D2C45 /* XDTrafficPart01UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423271FFF65F3003D2C45 /* XDTrafficPart01UITests.m */; };
+		38B423391FFF67B9003D2C45 /* XDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423381FFF67B9003D2C45 /* XDBaseViewController.m */; };
+		38B4233C1FFF67F1003D2C45 /* XDBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B4233B1FFF67F1003D2C45 /* XDBaseNavViewController.m */; };
+		38B423431FFF689D003D2C45 /* XDBaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423421FFF689D003D2C45 /* XDBaseMapViewController.m */; };
+		38B423461FFF692C003D2C45 /* XDMonitoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423451FFF692C003D2C45 /* XDMonitoViewController.m */; };
+		38B4234B1FFF6E5C003D2C45 /* XDClloctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B4234A1FFF6E5C003D2C45 /* XDClloctionManager.m */; };
+		38B4234E1FFF716E003D2C45 /* CLLocation+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B4234C1FFF716E003D2C45 /* CLLocation+Additions.m */; };
+		D1CDFA0FC43269B562804689 /* libPods-XDTrafficPart01.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A40F40B65BFE6FD6F3C4E8A5 /* libPods-XDTrafficPart01.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +56,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38597A082003151E00D10275 /* XDPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPersonViewController.h; sourceTree = "<group>"; };
+		38597A092003151E00D10275 /* XDPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPersonViewController.m; sourceTree = "<group>"; };
+		38597A0C20031A7300D10275 /* XDDeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDDeviceManager.h; sourceTree = "<group>"; };
+		38597A0D20031A7300D10275 /* XDDeviceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDDeviceManager.m; sourceTree = "<group>"; };
+		38597A1020031BA300D10275 /* XDNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDNetWork.h; sourceTree = "<group>"; };
+		38597A1120031BA300D10275 /* XDNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDNetWork.m; sourceTree = "<group>"; };
+		38597A142003374F00D10275 /* XDUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDUserManager.h; sourceTree = "<group>"; };
+		38597A152003374F00D10275 /* XDUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDUserManager.m; sourceTree = "<group>"; };
+		38597A1A20033DD900D10275 /* EquipmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentModel.m; sourceTree = "<group>"; };
+		38597A1B20033DD900D10275 /* EquipmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentModel.h; sourceTree = "<group>"; };
+		38597A1D20033EE100D10275 /* XDClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDClientManager.m; sourceTree = "<group>"; };
+		38597A1E20033EE100D10275 /* XDClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDClientManager.h; sourceTree = "<group>"; };
+		38597A2020033F0600D10275 /* MQTTStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTStatus.m; sourceTree = "<group>"; };
+		38597A2120033F0600D10275 /* MQTTStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTStatus.h; sourceTree = "<group>"; };
+		38597A2320033F1000D10275 /* MQTTClientManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTClientManagerDelegate.h; sourceTree = "<group>"; };
+		38597A2420033F4300D10275 /* XDMsgDispose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMsgDispose.m; sourceTree = "<group>"; };
+		38597A2520033F4300D10275 /* XDMsgDispose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMsgDispose.h; sourceTree = "<group>"; };
+		38597A2720033F7700D10275 /* XDMqttMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMqttMessage.m; sourceTree = "<group>"; };
+		38597A2920033F8400D10275 /* XDMqttMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDMqttMessage.h; sourceTree = "<group>"; };
+		38597A2A20033FAE00D10275 /* FunBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunBox.h; sourceTree = "<group>"; };
+		38597A2B20033FC600D10275 /* FunBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunBox.m; sourceTree = "<group>"; };
+		38597A2E2003537D00D10275 /* XDMAPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMAPointAnnotation.h; sourceTree = "<group>"; };
+		38597A2F2003537D00D10275 /* XDMAPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMAPointAnnotation.m; sourceTree = "<group>"; };
+		38597A322003554600D10275 /* XDVehicleAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDVehicleAnnotationView.m; sourceTree = "<group>"; };
+		38597A332003554700D10275 /* XDVehicleAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDVehicleAnnotationView.h; sourceTree = "<group>"; };
+		38597A352003557600D10275 /* XDCustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCustomCalloutView.m; sourceTree = "<group>"; };
+		38597A362003557600D10275 /* XDCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCustomCalloutView.h; sourceTree = "<group>"; };
+		38597A39200355EB00D10275 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		38597A3A200355EB00D10275 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		38B422FD1FFF65F3003D2C45 /* XDTrafficPart01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDTrafficPart01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B423001FFF65F3003D2C45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38B423011FFF65F3003D2C45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38B423031FFF65F3003D2C45 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		38B423041FFF65F3003D2C45 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		38B423071FFF65F3003D2C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38B4230A1FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XDTrafficPart01.xcdatamodel; sourceTree = "<group>"; };
 		38B4230C1FFF65F3003D2C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B4230F1FFF65F3003D2C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +101,22 @@
 		38B423231FFF65F3003D2C45 /* XDTrafficPart01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XDTrafficPart01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B423271FFF65F3003D2C45 /* XDTrafficPart01UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDTrafficPart01UITests.m; sourceTree = "<group>"; };
 		38B423291FFF65F3003D2C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38B423371FFF67B9003D2C45 /* XDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDBaseViewController.h; sourceTree = "<group>"; };
+		38B423381FFF67B9003D2C45 /* XDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDBaseViewController.m; sourceTree = "<group>"; };
+		38B4233A1FFF67F1003D2C45 /* XDBaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDBaseNavViewController.h; sourceTree = "<group>"; };
+		38B4233B1FFF67F1003D2C45 /* XDBaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDBaseNavViewController.m; sourceTree = "<group>"; };
+		38B423411FFF689D003D2C45 /* XDBaseMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDBaseMapViewController.h; sourceTree = "<group>"; };
+		38B423421FFF689D003D2C45 /* XDBaseMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDBaseMapViewController.m; sourceTree = "<group>"; };
+		38B423441FFF692C003D2C45 /* XDMonitoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDMonitoViewController.h; sourceTree = "<group>"; };
+		38B423451FFF692C003D2C45 /* XDMonitoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDMonitoViewController.m; sourceTree = "<group>"; };
+		38B423471FFF6BA8003D2C45 /* XDAPPHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDAPPHeader.pch; sourceTree = "<group>"; };
+		38B423491FFF6E5C003D2C45 /* XDClloctionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDClloctionManager.h; sourceTree = "<group>"; };
+		38B4234A1FFF6E5C003D2C45 /* XDClloctionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDClloctionManager.m; sourceTree = "<group>"; };
+		38B4234C1FFF716E003D2C45 /* CLLocation+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Additions.m"; sourceTree = "<group>"; };
+		38B4234D1FFF716E003D2C45 /* CLLocation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Additions.h"; sourceTree = "<group>"; };
+		3DED64868D880EFBCD6BF886 /* Pods-XDTrafficPart01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDTrafficPart01.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDTrafficPart01/Pods-XDTrafficPart01.release.xcconfig"; sourceTree = "<group>"; };
+		A40F40B65BFE6FD6F3C4E8A5 /* libPods-XDTrafficPart01.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XDTrafficPart01.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4B49BC299CF0CF91B25525 /* Pods-XDTrafficPart01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDTrafficPart01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDTrafficPart01/Pods-XDTrafficPart01.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CDFA0FC43269B562804689 /* libPods-XDTrafficPart01.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +145,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38597A0B20031A3500D10275 /* MonitorManager */ = {
+			isa = PBXGroup;
+			children = (
+				38597A0C20031A7300D10275 /* XDDeviceManager.h */,
+				38597A0D20031A7300D10275 /* XDDeviceManager.m */,
+			);
+			path = MonitorManager;
+			sourceTree = "<group>";
+		};
+		38597A0F20031B7D00D10275 /* BaseNetBox(基础网络请求) */ = {
+			isa = PBXGroup;
+			children = (
+				38597A1020031BA300D10275 /* XDNetWork.h */,
+				38597A1120031BA300D10275 /* XDNetWork.m */,
+			);
+			path = "BaseNetBox(基础网络请求)";
+			sourceTree = "<group>";
+		};
+		38597A132003373C00D10275 /* XDUserManager(用户信息管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38597A142003374F00D10275 /* XDUserManager.h */,
+				38597A152003374F00D10275 /* XDUserManager.m */,
+			);
+			path = "XDUserManager(用户信息管理)";
+			sourceTree = "<group>";
+		};
+		38597A1920033D8D00D10275 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38597A1B20033DD900D10275 /* EquipmentModel.h */,
+				38597A1A20033DD900D10275 /* EquipmentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38597A2D2003403C00D10275 /* MQTTManager(消息处理类) */ = {
+			isa = PBXGroup;
+			children = (
+				38597A1E20033EE100D10275 /* XDClientManager.h */,
+				38597A1D20033EE100D10275 /* XDClientManager.m */,
+				38597A2120033F0600D10275 /* MQTTStatus.h */,
+				38597A2020033F0600D10275 /* MQTTStatus.m */,
+				38597A2920033F8400D10275 /* XDMqttMessage.h */,
+				38597A2720033F7700D10275 /* XDMqttMessage.m */,
+				38597A2520033F4300D10275 /* XDMsgDispose.h */,
+				38597A2420033F4300D10275 /* XDMsgDispose.m */,
+				38597A2320033F1000D10275 /* MQTTClientManagerDelegate.h */,
+				38597A2A20033FAE00D10275 /* FunBox.h */,
+				38597A2B20033FC600D10275 /* FunBox.m */,
+			);
+			path = "MQTTManager(消息处理类)";
+			sourceTree = "<group>";
+		};
+		38597A312003552700D10275 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38597A362003557600D10275 /* XDCustomCalloutView.h */,
+				38597A352003557600D10275 /* XDCustomCalloutView.m */,
+				38597A2E2003537D00D10275 /* XDMAPointAnnotation.h */,
+				38597A2F2003537D00D10275 /* XDMAPointAnnotation.m */,
+				38597A332003554700D10275 /* XDVehicleAnnotationView.h */,
+				38597A322003554600D10275 /* XDVehicleAnnotationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38597A38200355DD00D10275 /* ExtendedAttributes */ = {
+			isa = PBXGroup;
+			children = (
+				38597A39200355EB00D10275 /* UIColor+Hex.h */,
+				38597A3A200355EB00D10275 /* UIColor+Hex.m */,
+			);
+			path = ExtendedAttributes;
+			sourceTree = "<group>";
+		};
 		38B422F41FFF65F3003D2C45 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +228,8 @@
 				38B4231B1FFF65F3003D2C45 /* XDTrafficPart01Tests */,
 				38B423261FFF65F3003D2C45 /* XDTrafficPart01UITests */,
 				38B422FE1FFF65F3003D2C45 /* Products */,
+				DE9AF3CFAD1996E5F3C64D7F /* Pods */,
+				B419FA6625C8300773FC2AE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +250,18 @@
 				38B423011FFF65F3003D2C45 /* AppDelegate.m */,
 				38B423031FFF65F3003D2C45 /* ViewController.h */,
 				38B423041FFF65F3003D2C45 /* ViewController.m */,
-				38B423061FFF65F3003D2C45 /* Main.storyboard */,
+				38597A38200355DD00D10275 /* ExtendedAttributes */,
+				38597A2D2003403C00D10275 /* MQTTManager(消息处理类) */,
+				38597A132003373C00D10275 /* XDUserManager(用户信息管理) */,
+				38597A0F20031B7D00D10275 /* BaseNetBox(基础网络请求) */,
+				38B423481FFF6E32003D2C45 /* CLLocationManager(位置管理) */,
+				38B423361FFF67A7003D2C45 /* BaseVC(基础控制器) */,
+				38B423351FFF66EB003D2C45 /* MonitorPart(监控中心) */,
 				38B4230C1FFF65F3003D2C45 /* Assets.xcassets */,
 				38B4230E1FFF65F3003D2C45 /* LaunchScreen.storyboard */,
 				38B423111FFF65F3003D2C45 /* Info.plist */,
 				38B423121FFF65F3003D2C45 /* main.m */,
+				38B423471FFF6BA8003D2C45 /* XDAPPHeader.pch */,
 				38B423091FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld */,
 			);
 			path = XDTrafficPart01;
@@ -135,6 +285,69 @@
 			path = XDTrafficPart01UITests;
 			sourceTree = "<group>";
 		};
+		38B423351FFF66EB003D2C45 /* MonitorPart(监控中心) */ = {
+			isa = PBXGroup;
+			children = (
+				38597A312003552700D10275 /* View */,
+				38597A1920033D8D00D10275 /* Model */,
+				38597A0B20031A3500D10275 /* MonitorManager */,
+				38B4233D1FFF680F003D2C45 /* Controller */,
+			);
+			path = "MonitorPart(监控中心)";
+			sourceTree = "<group>";
+		};
+		38B423361FFF67A7003D2C45 /* BaseVC(基础控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				38B423371FFF67B9003D2C45 /* XDBaseViewController.h */,
+				38B423381FFF67B9003D2C45 /* XDBaseViewController.m */,
+				38B4233A1FFF67F1003D2C45 /* XDBaseNavViewController.h */,
+				38B4233B1FFF67F1003D2C45 /* XDBaseNavViewController.m */,
+				38B423411FFF689D003D2C45 /* XDBaseMapViewController.h */,
+				38B423421FFF689D003D2C45 /* XDBaseMapViewController.m */,
+			);
+			path = "BaseVC(基础控制器)";
+			sourceTree = "<group>";
+		};
+		38B4233D1FFF680F003D2C45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38B423441FFF692C003D2C45 /* XDMonitoViewController.h */,
+				38B423451FFF692C003D2C45 /* XDMonitoViewController.m */,
+				38597A082003151E00D10275 /* XDPersonViewController.h */,
+				38597A092003151E00D10275 /* XDPersonViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		38B423481FFF6E32003D2C45 /* CLLocationManager(位置管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38B4234D1FFF716E003D2C45 /* CLLocation+Additions.h */,
+				38B4234C1FFF716E003D2C45 /* CLLocation+Additions.m */,
+				38B423491FFF6E5C003D2C45 /* XDClloctionManager.h */,
+				38B4234A1FFF6E5C003D2C45 /* XDClloctionManager.m */,
+			);
+			path = "CLLocationManager(位置管理)";
+			sourceTree = "<group>";
+		};
+		B419FA6625C8300773FC2AE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40F40B65BFE6FD6F3C4E8A5 /* libPods-XDTrafficPart01.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE9AF3CFAD1996E5F3C64D7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB4B49BC299CF0CF91B25525 /* Pods-XDTrafficPart01.debug.xcconfig */,
+				3DED64868D880EFBCD6BF886 /* Pods-XDTrafficPart01.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +355,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B4232C1FFF65F3003D2C45 /* Build configuration list for PBXNativeTarget "XDTrafficPart01" */;
 			buildPhases = (
+				4CBE620884F179068006E534 /* [CP] Check Pods Manifest.lock */,
 				38B422F91FFF65F3003D2C45 /* Sources */,
 				38B422FA1FFF65F3003D2C45 /* Frameworks */,
 				38B422FB1FFF65F3003D2C45 /* Resources */,
+				2224E7B31B2FC789B262E21A /* [CP] Embed Pods Frameworks */,
+				7505265EA009B7F19972D9F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +419,11 @@
 					38B422FC1FFF65F3003D2C45 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					38B423171FFF65F3003D2C45 = {
 						CreatedOnToolsVersion = 9.2;
@@ -243,7 +464,6 @@
 			files = (
 				38B423101FFF65F3003D2C45 /* LaunchScreen.storyboard in Resources */,
 				38B4230D1FFF65F3003D2C45 /* Assets.xcassets in Resources */,
-				38B423081FFF65F3003D2C45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,15 +483,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2224E7B31B2FC789B262E21A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XDTrafficPart01/Pods-XDTrafficPart01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CBE620884F179068006E534 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7505265EA009B7F19972D9F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XDTrafficPart01/Pods-XDTrafficPart01-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38B422F91FFF65F3003D2C45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B423431FFF689D003D2C45 /* XDBaseMapViewController.m in Sources */,
+				38597A0A2003151E00D10275 /* XDPersonViewController.m in Sources */,
+				38597A1F20033EE100D10275 /* XDClientManager.m in Sources */,
+				38B4234E1FFF716E003D2C45 /* CLLocation+Additions.m in Sources */,
+				38597A0E20031A7300D10275 /* XDDeviceManager.m in Sources */,
+				38B4234B1FFF6E5C003D2C45 /* XDClloctionManager.m in Sources */,
+				38B423391FFF67B9003D2C45 /* XDBaseViewController.m in Sources */,
+				38597A162003374F00D10275 /* XDUserManager.m in Sources */,
+				38B4233C1FFF67F1003D2C45 /* XDBaseNavViewController.m in Sources */,
+				38597A372003557600D10275 /* XDCustomCalloutView.m in Sources */,
+				38597A2820033F7700D10275 /* XDMqttMessage.m in Sources */,
+				38597A2620033F4300D10275 /* XDMsgDispose.m in Sources */,
+				38597A1220031BA300D10275 /* XDNetWork.m in Sources */,
+				38597A3B200355EC00D10275 /* UIColor+Hex.m in Sources */,
+				38597A2220033F0700D10275 /* MQTTStatus.m in Sources */,
 				38B423051FFF65F3003D2C45 /* ViewController.m in Sources */,
+				38B423461FFF692C003D2C45 /* XDMonitoViewController.m in Sources */,
 				38B423021FFF65F3003D2C45 /* AppDelegate.m in Sources */,
 				38B423131FFF65F3003D2C45 /* main.m in Sources */,
+				38597A2C20033FC600D10275 /* FunBox.m in Sources */,
 				38B4230B1FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld in Sources */,
+				38597A1C20033DD900D10275 /* EquipmentModel.m in Sources */,
+				38597A342003554700D10275 /* XDVehicleAnnotationView.m in Sources */,
+				38597A302003537D00D10275 /* XDMAPointAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +595,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		38B423061FFF65F3003D2C45 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38B423071FFF65F3003D2C45 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38B4230E1FFF65F3003D2C45 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,29 +712,35 @@
 		};
 		38B4232D1FFF65F3003D2C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB4B49BC299CF0CF91B25525 /* Pods-XDTrafficPart01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7544NHCWU;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XDTrafficPart01/XDAPPHeader.pch";
 				INFOPLIST_FILE = XDTrafficPart01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.XDTrafficPart01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.TrafficAPPLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		38B4232E1FFF65F3003D2C45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DED64868D880EFBCD6BF886 /* Pods-XDTrafficPart01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7544NHCWU;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XDTrafficPart01/XDAPPHeader.pch";
 				INFOPLIST_FILE = XDTrafficPart01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.XDTrafficPart01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.TrafficAPPLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

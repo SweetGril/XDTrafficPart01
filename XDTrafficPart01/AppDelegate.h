@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
-
+@property (nonatomic, strong)CLLocationManager *locationManager;
 - (void)saveContext;
 
 

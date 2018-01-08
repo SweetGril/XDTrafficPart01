@@ -1,0 +1,26 @@
+//
+//  XDAPPHeader.pch
+//  XDTrafficPart01
+//
+//  Created by xiao dou on 2018/1/5.
+//  Copyright © 2018年 xiao dou. All rights reserved.
+//
+
+#ifndef XDAPPHeader_pch
+#define XDAPPHeader_pch
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "XDClloctionManager.h"
+#import "CLLocation+Additions.h"
+#import "UIColor+Hex.h"
+#import "XDUserManager.h"
+#import "XDDeviceManager.h"
+#import "XDClientManager.h"
+#import <YYModel.h>
+#import "Masonry.h"
+//常用判空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil ||str == NULL || [str length] < 1 ? YES : NO )
+#define RGB(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+#define APIHEADStr(string) [NSString stringWithFormat:@"http://api.4things.cn%@",string];
+#endif /* XDAPPHeader_pch */

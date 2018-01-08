@@ -1,0 +1,1 @@
+../../../snappy-library/snappy-internal.h

@@ -1,0 +1,1 @@
+../../../snappy-library/snappy-stubs-internal.h
