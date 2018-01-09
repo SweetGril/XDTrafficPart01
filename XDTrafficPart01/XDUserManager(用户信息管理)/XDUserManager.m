@@ -8,28 +8,83 @@
 
 #import "XDUserManager.h"
 
-static  XDUserManager *_manager;
+static  XDUserManager *_userManager;
 /**用户信息管理 manager*/
 @implementation XDUserManager
 + (XDUserManager*)sharedInstance{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _manager = [[XDUserManager alloc] init];
-        _manager.apiKey = @"DtHDuy4m";
-        _manager.apiSecret = @"EqHjOPUj7CZSgsxltxXuFauM";
-        _manager.icon = @"http://static.4things.cn/icon/MTM1MTY3MDY4MDI=.jpg?t=1511955544106";
-        _manager.nick = @"JY";
-        _manager.notify = @"13625811915";
-        _manager.userClientId = @"k1mr5c0ESQNJln3I";
+        _userManager = [[XDUserManager alloc] init];
     });
-    return _manager;
+    return _userManager;
 }
-//- (void)loginWithMobile:(NSString *)mobile andPassword:(NSString *)mobile{
-//    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] init];
-//    [dataDic setValue:mobile forKey:@"mobile"];
-//    [dataDic setValue:mobile forKey:@"password"];
-//    NSString *url = APIHEADStr(@"/user/login");
-//    
-//
-//}
+/**登录*/
+- (void)loginWithMobile:(NSString *)mobile andPassword:(NSString *)password success:(void (^)(NSDictionary *success))successBlock failure:(void (^)(NSError *failure))failureBlock{
+    if (!kStringIsEmpty(_userManager.userClientId)) {
+         successBlock(nil);
+        return;
+    }
+    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] init];
+    [dataDic setValue:mobile forKey:@"mobile"];
+    [dataDic setValue:password forKey:@"password"];
+    NSString *url = APIHEADStr(@"/user/login");
+    [[XDNetWork sharedInstance]postRequestWithUrl:url andParameters:dataDic success:^(NSDictionary *success) {
+        NSMutableDictionary *dataDic =[[NSMutableDictionary alloc] initWithDictionary:success[@"data"]];
+        if ([success[@"code"] intValue]==200) {
+            NSString *clientString =dataDic[@"userClientId"];
+            if (!kStringIsEmpty(clientString)) {
+                [dataDic setValue:mobile forKey:@"phoneNum"];
+                [self insertDataToManager:dataDic];
+                NSMutableData *data = [[NSMutableData alloc] initWithCapacity:0];
+                NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+                [archiver encodeObject:dataDic];
+                [archiver finishEncoding];
+                [data writeToFile:[self getFilePath] atomically:YES];
+            }
+            successBlock(nil);
+        }
+    } failure:^(NSError *failure) {
+        failureBlock(failure);
+    }];
+}
+/**读取本地保存的信息*/
+- (void)readLocationData{
+    NSData *data = [NSData dataWithContentsOfFile:[self getFilePath]];
+    NSKeyedUnarchiver *unArchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+    NSDictionary *dataDic = [unArchiver decodeObject];
+    [self insertDataToManager:dataDic];
+    [unArchiver finishDecoding];
+}
+
+
+/**清除本地保存的个人信息*/
+- (void)clearUserData{
+    _userManager.icon = @"";
+    _userManager.nick = @"";
+    _userManager.phoneNum = @"";
+    _userManager.apiKey = @"";
+    _userManager.apiSecret = @"";
+    _userManager.notify = @"";
+    _userManager.userClientId = @"";
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isDelete=[fileManager removeItemAtPath:[self getFilePath] error:nil];
+    NSLog(@"%d",isDelete);
+}
+
+- (void)insertDataToManager:(NSDictionary *)dataDic{
+    _userManager.icon =dataDic[@"icon"];
+    _userManager.nick=dataDic[@"nick"];
+    _userManager.phoneNum=dataDic[@"phoneNum"];
+    _userManager.apiKey = dataDic[@"apiKey"];
+    _userManager.apiSecret = dataDic[@"apiSecret"];
+    _userManager.notify = dataDic[@"notify"];
+    _userManager.userClientId =dataDic[@"userClientId"];
+}
+- (NSString *)getFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths objectAtIndex:0];
+    NSString *file = [path stringByAppendingPathComponent:@"person.data"];
+    return file;
+}
 @end

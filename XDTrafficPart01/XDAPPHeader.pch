@@ -18,6 +18,8 @@
 #import "XDClientManager.h"
 #import <YYModel.h>
 #import "Masonry.h"
+#import "Constants.h"
+#import "XDMaqttClientManger.h"
 //常用判空
 #define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
 #define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil ||str == NULL || [str length] < 1 ? YES : NO )

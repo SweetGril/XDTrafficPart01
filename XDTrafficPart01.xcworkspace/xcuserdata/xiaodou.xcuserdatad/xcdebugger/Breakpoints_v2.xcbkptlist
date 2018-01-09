@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XDTrafficPart01/AppDelegate.m"
-            timestampString = "537106934.813743"
+            filePath = "XDTrafficPart01/MonitorPart(&#x76d1;&#x63a7;&#x4e2d;&#x5fc3;)/Controller/XDMonitoViewController.m"
+            timestampString = "537184835.514511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-locationManager:didFailWithError:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XDTrafficPart01/BaseNetBox(&#x57fa;&#x7840;&#x7f51;&#x7edc;&#x8bf7;&#x6c42;)/XDNetWork.m"
-            timestampString = "537106934.813827"
+            filePath = "XDTrafficPart01/BaseVC(&#x57fa;&#x7840;&#x63a7;&#x5236;&#x5668;)/XDBaseViewController.m"
+            timestampString = "537184835.514645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-postRequestWithUrl:andParameters:success:failure:"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-dealloc"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XDTrafficPart01/ViewController.m"
+            timestampString = "537184835.514711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

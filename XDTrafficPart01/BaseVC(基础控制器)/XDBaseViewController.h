@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface XDBaseViewController : UIViewController
-- (void)mqttClientMsg:(id)model;
+-(void)liveManagerDidReceiveMessage:(NSNotification *)notifi;
 @end

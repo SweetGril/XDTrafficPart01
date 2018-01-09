@@ -21,6 +21,9 @@
 		38597A342003554700D10275 /* XDVehicleAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A322003554600D10275 /* XDVehicleAnnotationView.m */; };
 		38597A372003557600D10275 /* XDCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A352003557600D10275 /* XDCustomCalloutView.m */; };
 		38597A3B200355EC00D10275 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A3A200355EB00D10275 /* UIColor+Hex.m */; };
+		38597A3E2004933C00D10275 /* XDAMapReGeocodeSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A3D2004933B00D10275 /* XDAMapReGeocodeSearchRequest.m */; };
+		38597A412004BF0300D10275 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A402004BF0200D10275 /* Constants.m */; };
+		38597A442004C0B500D10275 /* XDMaqttClientManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 38597A432004C0B500D10275 /* XDMaqttClientManger.m */; };
 		38B423021FFF65F3003D2C45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423011FFF65F3003D2C45 /* AppDelegate.m */; };
 		38B423051FFF65F3003D2C45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423041FFF65F3003D2C45 /* ViewController.m */; };
 		38B4230B1FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38B423091FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld */; };
@@ -85,6 +88,12 @@
 		38597A362003557600D10275 /* XDCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCustomCalloutView.h; sourceTree = "<group>"; };
 		38597A39200355EB00D10275 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		38597A3A200355EB00D10275 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		38597A3C2004933B00D10275 /* XDAMapReGeocodeSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDAMapReGeocodeSearchRequest.h; sourceTree = "<group>"; };
+		38597A3D2004933B00D10275 /* XDAMapReGeocodeSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDAMapReGeocodeSearchRequest.m; sourceTree = "<group>"; };
+		38597A3F2004BF0200D10275 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		38597A402004BF0200D10275 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		38597A422004C0B500D10275 /* XDMaqttClientManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDMaqttClientManger.h; sourceTree = "<group>"; };
+		38597A432004C0B500D10275 /* XDMaqttClientManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDMaqttClientManger.m; sourceTree = "<group>"; };
 		38B422FD1FFF65F3003D2C45 /* XDTrafficPart01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDTrafficPart01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B423001FFF65F3003D2C45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38B423011FFF65F3003D2C45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -145,13 +154,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38597A0B20031A3500D10275 /* MonitorManager */ = {
+		38597A0B20031A3500D10275 /* MonitorManager(设备管理) */ = {
 			isa = PBXGroup;
 			children = (
 				38597A0C20031A7300D10275 /* XDDeviceManager.h */,
 				38597A0D20031A7300D10275 /* XDDeviceManager.m */,
 			);
-			path = MonitorManager;
+			path = "MonitorManager(设备管理)";
 			sourceTree = "<group>";
 		};
 		38597A0F20031B7D00D10275 /* BaseNetBox(基础网络请求) */ = {
@@ -184,6 +193,8 @@
 		38597A2D2003403C00D10275 /* MQTTManager(消息处理类) */ = {
 			isa = PBXGroup;
 			children = (
+				38597A422004C0B500D10275 /* XDMaqttClientManger.h */,
+				38597A432004C0B500D10275 /* XDMaqttClientManger.m */,
 				38597A1E20033EE100D10275 /* XDClientManager.h */,
 				38597A1D20033EE100D10275 /* XDClientManager.m */,
 				38597A2120033F0600D10275 /* MQTTStatus.h */,
@@ -262,6 +273,8 @@
 				38B423111FFF65F3003D2C45 /* Info.plist */,
 				38B423121FFF65F3003D2C45 /* main.m */,
 				38B423471FFF6BA8003D2C45 /* XDAPPHeader.pch */,
+				38597A3F2004BF0200D10275 /* Constants.h */,
+				38597A402004BF0200D10275 /* Constants.m */,
 				38B423091FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld */,
 			);
 			path = XDTrafficPart01;
@@ -290,7 +303,7 @@
 			children = (
 				38597A312003552700D10275 /* View */,
 				38597A1920033D8D00D10275 /* Model */,
-				38597A0B20031A3500D10275 /* MonitorManager */,
+				38597A0B20031A3500D10275 /* MonitorManager(设备管理) */,
 				38B4233D1FFF680F003D2C45 /* Controller */,
 			);
 			path = "MonitorPart(监控中心)";
@@ -323,6 +336,8 @@
 		38B423481FFF6E32003D2C45 /* CLLocationManager(位置管理) */ = {
 			isa = PBXGroup;
 			children = (
+				38597A3C2004933B00D10275 /* XDAMapReGeocodeSearchRequest.h */,
+				38597A3D2004933B00D10275 /* XDAMapReGeocodeSearchRequest.m */,
 				38B4234D1FFF716E003D2C45 /* CLLocation+Additions.h */,
 				38B4234C1FFF716E003D2C45 /* CLLocation+Additions.m */,
 				38B423491FFF6E5C003D2C45 /* XDClloctionManager.h */,
@@ -541,11 +556,14 @@
 				38597A1F20033EE100D10275 /* XDClientManager.m in Sources */,
 				38B4234E1FFF716E003D2C45 /* CLLocation+Additions.m in Sources */,
 				38597A0E20031A7300D10275 /* XDDeviceManager.m in Sources */,
+				38597A442004C0B500D10275 /* XDMaqttClientManger.m in Sources */,
 				38B4234B1FFF6E5C003D2C45 /* XDClloctionManager.m in Sources */,
 				38B423391FFF67B9003D2C45 /* XDBaseViewController.m in Sources */,
+				38597A412004BF0300D10275 /* Constants.m in Sources */,
 				38597A162003374F00D10275 /* XDUserManager.m in Sources */,
 				38B4233C1FFF67F1003D2C45 /* XDBaseNavViewController.m in Sources */,
 				38597A372003557600D10275 /* XDCustomCalloutView.m in Sources */,
+				38597A3E2004933C00D10275 /* XDAMapReGeocodeSearchRequest.m in Sources */,
 				38597A2820033F7700D10275 /* XDMqttMessage.m in Sources */,
 				38597A2620033F4300D10275 /* XDMsgDispose.m in Sources */,
 				38597A1220031BA300D10275 /* XDNetWork.m in Sources */,

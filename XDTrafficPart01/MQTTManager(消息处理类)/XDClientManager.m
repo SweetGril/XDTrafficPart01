@@ -24,6 +24,13 @@ typedef void(^flagBlock)(BOOL flag) ;//定义block
 @property(nonatomic, assign)    NSUInteger connectCount;//自动重连次数
 @property(nonatomic, assign)    NSUInteger nowCount;//当前已经重连的次数
 @end
+/**
+ 这是个方法库，具体的调用使用是在XDMqttClientManger
+ 统一进行
+ 消息的处理接受 转为XDMessageManager类型进行分发；
+ 设备的订阅；
+ 设备的取消订阅；
+ */
 @implementation XDClientManager
 #pragma mark 对外方法
 /**

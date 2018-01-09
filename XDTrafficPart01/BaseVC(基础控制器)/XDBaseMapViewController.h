@@ -16,8 +16,6 @@
 @property (nonatomic,strong)MAMapView *bgMapView;
 /**这个属性如果是空则表示显示所有的设备，否则就是单个设备*/
 @property (nonatomic, strong) EquipmentModel *objectModel;
-/**单击设备操作*/
-@property (copy, nonatomic)void (^clickDeviceDetail)(EquipmentModel *indexModel);
-/**长按设备操作*/
-@property (copy, nonatomic)void (^longTouchButton)(EquipmentModel *modelObj,XDVehicleAnnotationView *selectView);
+#pragma mark 设备后位置信息的实时更改
+- (void)deviceMoveWithCLLocationCoordinate2D:(CLLocationCoordinate2D )coordinate andSpeedStr:(NSString *)speedStr andTopic:(NSString *)topic;
 @end

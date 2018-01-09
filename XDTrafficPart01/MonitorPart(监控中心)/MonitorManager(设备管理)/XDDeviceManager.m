@@ -11,15 +11,15 @@
 /**
  设备管理类方法 
  */
-static XDDeviceManager *_manager;
+static XDDeviceManager *_deviceManager;
 @implementation XDDeviceManager
 
 + (XDDeviceManager *)sharedManager{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _manager = [[XDDeviceManager alloc] init];
+        _deviceManager = [[XDDeviceManager alloc] init];
     });
-    return _manager;
+    return _deviceManager;
 }
 - (void)postDeviceListsuccess:(void (^)(NSDictionary *success))successBlock
                       failure:(void (^)(NSError *failure))failureBlock{
@@ -35,10 +35,20 @@ static XDDeviceManager *_manager;
         NSMutableArray *topicArray = [[NSMutableArray alloc] init];
         for (int a=0; a<listDeviceArray.count; a++){
             EquipmentModel *model =[EquipmentModel yy_modelWithJSON:listDeviceArray[a]];
+            model.location2D = CLLocationCoordinate2DMake(model.lat, model.lon);
             [topicDic setValue:model.realTopic forKey:model.realTopic];
             [topicArray addObject:model.realTopic];
             [_allDeviceDictionary setObject:model forKey:model.realTopic];
+            
+            [[XDClloctionManager sharedManager]searchReGeocodeWithCoordinate:CLLocationCoordinate2DMake(model.lat,model.lon) withTopic:model.realTopic];
+            [XDClloctionManager sharedManager].addressBlock = ^(NSString *addressStr,NSString *topic) {
+                NSString *keyStr =[XDDeviceManager sharedManager].allDeviceDictionary.allKeys[a];
+                EquipmentModel *modelObj =[[XDDeviceManager sharedManager].allDeviceDictionary objectForKey:keyStr];
+                modelObj.placeStr =addressStr;
+                [[XDDeviceManager sharedManager].allDeviceDictionary setValue:modelObj forKey:modelObj.realTopic];
+            };
         }
+       [[XDClientManager shareInstance].mqttSession subscribeToTopics:topicDic];
         successBlock(nil);
     } failure:^(NSError *failure) {
         failureBlock(nil);

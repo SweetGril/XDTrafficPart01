@@ -29,4 +29,6 @@
 @property(nonatomic,strong) NSString * signal;
 /**接受到的位置移动时间*/
 @property(nonatomic,strong) NSString * time;
+/**经纬度坐标*/
+@property(nonatomic,assign) CLLocationCoordinate2D location2D;
 @end

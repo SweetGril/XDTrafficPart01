@@ -61,6 +61,7 @@
         if ([dataDic[@"code"] intValue]==401) {
             
             NSLog(@"====用户被挤下线====");
+            [[XDUserManager sharedInstance] clearUserData];
 //            LoginViewController *loginView = [[LoginViewController alloc] init];
 //            UINavigationController * navigationView = [[UINavigationController alloc]initWithRootViewController:loginView];
 //            navigationView.navigationBarHidden = YES;

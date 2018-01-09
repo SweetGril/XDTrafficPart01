@@ -56,8 +56,8 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     if (selected ==NO) {
-           self.calloutView.infoLab.backgroundColor =[UIColor colorWithHexString:@"#4d4d4d" withAlpha:0.7];
-         _tipImgViewIcon.image =[UIImage imageNamed:@"gray-j"];
+        self.calloutView.infoLab.backgroundColor =[UIColor colorWithHexString:@"#4d4d4d" withAlpha:0.7];
+        _tipImgViewIcon.image =[UIImage imageNamed:@"gray-j"];
         if (_typeNum==1) {
             self.pointImageView.image =[UIImage imageNamed:@"device-icon"];
         }
@@ -69,14 +69,14 @@
         }
     }
     else{
-         _tipImgViewIcon.image =[UIImage imageNamed:@"red-j"];
-       self.calloutView.infoLab.backgroundColor =[UIColor colorWithHexString:@"#d0021b" withAlpha:0.7];
+        _tipImgViewIcon.image =[UIImage imageNamed:@"red-j"];
+        self.calloutView.infoLab.backgroundColor =[UIColor colorWithHexString:@"#d0021b" withAlpha:0.7];
         if (_typeNum==1) {
             self.pointImageView.image =[UIImage imageNamed:@"Fill_icon"];
         }
         else if (_typeNum==2){
             self.pointImageView.image =[UIImage imageNamed:@"hdmotorbike"];
-       }
+        }
         else if (_typeNum==3){
            self.pointImageView.image =[UIImage imageNamed:@"monitoring_point"];
         }
@@ -113,7 +113,7 @@
         contentStr = [NSString stringWithFormat:@"%@ 静止",_modelObj.deviceName];
     }
     self.calloutView.infoStr = contentStr;
-   
+    self.typeType = _modelObj.deviceType;
 }
 
 @end

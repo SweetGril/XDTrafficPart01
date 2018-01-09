@@ -24,16 +24,10 @@
     ViewController *vc =[[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
-//    if ([XDClientManager shareInstance].messageDelegate ==nil) {
-//        [XDClientManager shareInstance].messageDelegate = self;
-//        [[XDClientManager shareInstance]loginWithIp:@"4things.cn" port:1883 isAutoConnect:false isAutoConnectCount:19 clientID:[XDUserManager sharedInstance].userClientId];
-//    }
+  
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

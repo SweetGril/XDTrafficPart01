@@ -25,7 +25,9 @@ typedef NS_ENUM(NSInteger, XDMessageManagerType) {
 /**代理返回接收数据*/
 - (void)receiveWithType:(XDMessageManagerType)type andResponseData:(id)responseData;
 @end
-/**统一进行
+/**
+   这是个方法库，具体的调用使用是在XDMqttClientManger
+   统一进行
    消息的处理接受 转为XDMessageManager类型进行分发；
    设备的订阅；
    设备的取消订阅；
