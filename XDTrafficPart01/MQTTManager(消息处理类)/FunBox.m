@@ -84,6 +84,4 @@ int64_t javaByteToInt64(uint8_t* bytes) {
     return stopTime;
 }
 
-
-
 @end

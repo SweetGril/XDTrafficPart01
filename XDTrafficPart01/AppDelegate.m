@@ -61,7 +61,6 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation *newLocation = locations[0];
     [XDClloctionManager sharedManager].nowPoint = [newLocation marsCoordinate];
-//    [XDClloctionManager sharedManager].nowPoint = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     [manager stopUpdatingLocation];
 }
 

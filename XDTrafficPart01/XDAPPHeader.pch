@@ -16,10 +16,18 @@
 #import "XDUserManager.h"
 #import "XDDeviceManager.h"
 #import "XDClientManager.h"
+#import "XDFenceManager.h"
 #import <YYModel.h>
 #import "Masonry.h"
 #import "Constants.h"
+#import "FunBox.h"
 #import "XDMaqttClientManger.h"
+#define  ScreenWidth     ([UIScreen mainScreen].bounds.size.width)
+#define  ScreenHeight    ([UIScreen mainScreen].bounds.size.height)
+//weak
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define STRONGSELF typeof(self) __strong strongSelf = self;
+#define STRONGSELFFor(object) typeof(object) __strong strongSelf = object;
 //常用判空
 #define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
 #define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil ||str == NULL || [str length] < 1 ? YES : NO )

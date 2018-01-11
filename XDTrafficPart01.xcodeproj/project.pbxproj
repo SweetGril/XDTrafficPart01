@@ -38,6 +38,17 @@
 		38B423461FFF692C003D2C45 /* XDMonitoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B423451FFF692C003D2C45 /* XDMonitoViewController.m */; };
 		38B4234B1FFF6E5C003D2C45 /* XDClloctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B4234A1FFF6E5C003D2C45 /* XDClloctionManager.m */; };
 		38B4234E1FFF716E003D2C45 /* CLLocation+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B4234C1FFF716E003D2C45 /* CLLocation+Additions.m */; };
+		38FAD7D72005AF3F006A970E /* XDFenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7D62005AF3F006A970E /* XDFenceManager.m */; };
+		38FAD7DA2005B12E006A970E /* XDCricleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7D92005B12E006A970E /* XDCricleModel.m */; };
+		38FAD7E02005B811006A970E /* XDCirlcle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7DF2005B811006A970E /* XDCirlcle.m */; };
+		38FAD7E32005BFCD006A970E /* XDMAPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7E22005BFCD006A970E /* XDMAPolygon.m */; };
+		38FAD7E72005DC2A006A970E /* XDDeviceEditTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7E52005DC2A006A970E /* XDDeviceEditTipView.m */; };
+		38FAD7E82005DC2A006A970E /* XDDeviceEditTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD7E62005DC2A006A970E /* XDDeviceEditTipView.xib */; };
+		38FAD7EC2005DC6E006A970E /* XDDetailsPartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD7EA2005DC6E006A970E /* XDDetailsPartView.xib */; };
+		38FAD7ED2005DC6E006A970E /* XDDetailsPartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7EB2005DC6E006A970E /* XDDetailsPartView.m */; };
+		38FAD7F02005DC93006A970E /* XDEditFencePointAntion.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7EF2005DC93006A970E /* XDEditFencePointAntion.m */; };
+		38FAD7F42005E95E006A970E /* XDFenceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7F32005E95E006A970E /* XDFenceAnnotation.m */; };
+		38FAD7F72005E9B7006A970E /* XDFenceEditAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD7F62005E9B7006A970E /* XDFenceEditAnnotation.m */; };
 		D1CDFA0FC43269B562804689 /* libPods-XDTrafficPart01.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A40F40B65BFE6FD6F3C4E8A5 /* libPods-XDTrafficPart01.a */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +134,26 @@
 		38B4234A1FFF6E5C003D2C45 /* XDClloctionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDClloctionManager.m; sourceTree = "<group>"; };
 		38B4234C1FFF716E003D2C45 /* CLLocation+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Additions.m"; sourceTree = "<group>"; };
 		38B4234D1FFF716E003D2C45 /* CLLocation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Additions.h"; sourceTree = "<group>"; };
+		38FAD7D52005AF3F006A970E /* XDFenceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDFenceManager.h; sourceTree = "<group>"; };
+		38FAD7D62005AF3F006A970E /* XDFenceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDFenceManager.m; sourceTree = "<group>"; };
+		38FAD7D82005B12E006A970E /* XDCricleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCricleModel.h; sourceTree = "<group>"; };
+		38FAD7D92005B12E006A970E /* XDCricleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCricleModel.m; sourceTree = "<group>"; };
+		38FAD7DE2005B811006A970E /* XDCirlcle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCirlcle.h; sourceTree = "<group>"; };
+		38FAD7DF2005B811006A970E /* XDCirlcle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCirlcle.m; sourceTree = "<group>"; };
+		38FAD7E12005BFCD006A970E /* XDMAPolygon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDMAPolygon.h; sourceTree = "<group>"; };
+		38FAD7E22005BFCD006A970E /* XDMAPolygon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDMAPolygon.m; sourceTree = "<group>"; };
+		38FAD7E42005DC29006A970E /* XDDeviceEditTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDeviceEditTipView.h; sourceTree = "<group>"; };
+		38FAD7E52005DC2A006A970E /* XDDeviceEditTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDeviceEditTipView.m; sourceTree = "<group>"; };
+		38FAD7E62005DC2A006A970E /* XDDeviceEditTipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDDeviceEditTipView.xib; sourceTree = "<group>"; };
+		38FAD7E92005DC6E006A970E /* XDDetailsPartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDetailsPartView.h; sourceTree = "<group>"; };
+		38FAD7EA2005DC6E006A970E /* XDDetailsPartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDDetailsPartView.xib; sourceTree = "<group>"; };
+		38FAD7EB2005DC6E006A970E /* XDDetailsPartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDetailsPartView.m; sourceTree = "<group>"; };
+		38FAD7EE2005DC93006A970E /* XDEditFencePointAntion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDEditFencePointAntion.h; sourceTree = "<group>"; };
+		38FAD7EF2005DC93006A970E /* XDEditFencePointAntion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDEditFencePointAntion.m; sourceTree = "<group>"; };
+		38FAD7F22005E95E006A970E /* XDFenceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceAnnotation.h; sourceTree = "<group>"; };
+		38FAD7F32005E95E006A970E /* XDFenceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceAnnotation.m; sourceTree = "<group>"; };
+		38FAD7F52005E9B7006A970E /* XDFenceEditAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceEditAnnotation.h; sourceTree = "<group>"; };
+		38FAD7F62005E9B7006A970E /* XDFenceEditAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceEditAnnotation.m; sourceTree = "<group>"; };
 		3DED64868D880EFBCD6BF886 /* Pods-XDTrafficPart01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDTrafficPart01.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDTrafficPart01/Pods-XDTrafficPart01.release.xcconfig"; sourceTree = "<group>"; };
 		A40F40B65BFE6FD6F3C4E8A5 /* libPods-XDTrafficPart01.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XDTrafficPart01.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4B49BC299CF0CF91B25525 /* Pods-XDTrafficPart01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDTrafficPart01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDTrafficPart01/Pods-XDTrafficPart01.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +188,8 @@
 		38597A0B20031A3500D10275 /* MonitorManager(设备管理) */ = {
 			isa = PBXGroup;
 			children = (
+				38597A1B20033DD900D10275 /* EquipmentModel.h */,
+				38597A1A20033DD900D10275 /* EquipmentModel.m */,
 				38597A0C20031A7300D10275 /* XDDeviceManager.h */,
 				38597A0D20031A7300D10275 /* XDDeviceManager.m */,
 			);
@@ -184,8 +217,12 @@
 		38597A1920033D8D00D10275 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				38597A1B20033DD900D10275 /* EquipmentModel.h */,
-				38597A1A20033DD900D10275 /* EquipmentModel.m */,
+				38FAD7DE2005B811006A970E /* XDCirlcle.h */,
+				38FAD7DF2005B811006A970E /* XDCirlcle.m */,
+				38FAD7E12005BFCD006A970E /* XDMAPolygon.h */,
+				38FAD7E22005BFCD006A970E /* XDMAPolygon.m */,
+				38FAD7D82005B12E006A970E /* XDCricleModel.h */,
+				38FAD7D92005B12E006A970E /* XDCricleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,12 +250,12 @@
 		38597A312003552700D10275 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38597A362003557600D10275 /* XDCustomCalloutView.h */,
-				38597A352003557600D10275 /* XDCustomCalloutView.m */,
-				38597A2E2003537D00D10275 /* XDMAPointAnnotation.h */,
-				38597A2F2003537D00D10275 /* XDMAPointAnnotation.m */,
-				38597A332003554700D10275 /* XDVehicleAnnotationView.h */,
-				38597A322003554600D10275 /* XDVehicleAnnotationView.m */,
+				38FAD7E92005DC6E006A970E /* XDDetailsPartView.h */,
+				38FAD7EB2005DC6E006A970E /* XDDetailsPartView.m */,
+				38FAD7EA2005DC6E006A970E /* XDDetailsPartView.xib */,
+				38FAD7E42005DC29006A970E /* XDDeviceEditTipView.h */,
+				38FAD7E52005DC2A006A970E /* XDDeviceEditTipView.m */,
+				38FAD7E62005DC2A006A970E /* XDDeviceEditTipView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,6 +300,8 @@
 				38B423041FFF65F3003D2C45 /* ViewController.m */,
 				38597A38200355DD00D10275 /* ExtendedAttributes */,
 				38597A2D2003403C00D10275 /* MQTTManager(消息处理类) */,
+				38FAD7D42005AF1F006A970E /* XDFenceManager(围栏管理) */,
+				38597A0B20031A3500D10275 /* MonitorManager(设备管理) */,
 				38597A132003373C00D10275 /* XDUserManager(用户信息管理) */,
 				38597A0F20031B7D00D10275 /* BaseNetBox(基础网络请求) */,
 				38B423481FFF6E32003D2C45 /* CLLocationManager(位置管理) */,
@@ -302,8 +341,6 @@
 			isa = PBXGroup;
 			children = (
 				38597A312003552700D10275 /* View */,
-				38597A1920033D8D00D10275 /* Model */,
-				38597A0B20031A3500D10275 /* MonitorManager(设备管理) */,
 				38B4233D1FFF680F003D2C45 /* Controller */,
 			);
 			path = "MonitorPart(监控中心)";
@@ -312,6 +349,7 @@
 		38B423361FFF67A7003D2C45 /* BaseVC(基础控制器) */ = {
 			isa = PBXGroup;
 			children = (
+				38FAD7F12005E954006A970E /* XDMAAnnotationViewGroup */,
 				38B423371FFF67B9003D2C45 /* XDBaseViewController.h */,
 				38B423381FFF67B9003D2C45 /* XDBaseViewController.m */,
 				38B4233A1FFF67F1003D2C45 /* XDBaseNavViewController.h */,
@@ -344,6 +382,35 @@
 				38B4234A1FFF6E5C003D2C45 /* XDClloctionManager.m */,
 			);
 			path = "CLLocationManager(位置管理)";
+			sourceTree = "<group>";
+		};
+		38FAD7D42005AF1F006A970E /* XDFenceManager(围栏管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38597A1920033D8D00D10275 /* Model */,
+				38FAD7D52005AF3F006A970E /* XDFenceManager.h */,
+				38FAD7D62005AF3F006A970E /* XDFenceManager.m */,
+			);
+			path = "XDFenceManager(围栏管理)";
+			sourceTree = "<group>";
+		};
+		38FAD7F12005E954006A970E /* XDMAAnnotationViewGroup */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD7F52005E9B7006A970E /* XDFenceEditAnnotation.h */,
+				38FAD7F62005E9B7006A970E /* XDFenceEditAnnotation.m */,
+				38FAD7F22005E95E006A970E /* XDFenceAnnotation.h */,
+				38FAD7F32005E95E006A970E /* XDFenceAnnotation.m */,
+				38FAD7EE2005DC93006A970E /* XDEditFencePointAntion.h */,
+				38FAD7EF2005DC93006A970E /* XDEditFencePointAntion.m */,
+				38597A362003557600D10275 /* XDCustomCalloutView.h */,
+				38597A352003557600D10275 /* XDCustomCalloutView.m */,
+				38597A2E2003537D00D10275 /* XDMAPointAnnotation.h */,
+				38597A2F2003537D00D10275 /* XDMAPointAnnotation.m */,
+				38597A332003554700D10275 /* XDVehicleAnnotationView.h */,
+				38597A322003554600D10275 /* XDVehicleAnnotationView.m */,
+			);
+			path = XDMAAnnotationViewGroup;
 			sourceTree = "<group>";
 		};
 		B419FA6625C8300773FC2AE2 /* Frameworks */ = {
@@ -478,6 +545,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B423101FFF65F3003D2C45 /* LaunchScreen.storyboard in Resources */,
+				38FAD7E82005DC2A006A970E /* XDDeviceEditTipView.xib in Resources */,
+				38FAD7EC2005DC6E006A970E /* XDDetailsPartView.xib in Resources */,
 				38B4230D1FFF65F3003D2C45 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,15 +623,20 @@
 				38B423431FFF689D003D2C45 /* XDBaseMapViewController.m in Sources */,
 				38597A0A2003151E00D10275 /* XDPersonViewController.m in Sources */,
 				38597A1F20033EE100D10275 /* XDClientManager.m in Sources */,
+				38FAD7ED2005DC6E006A970E /* XDDetailsPartView.m in Sources */,
 				38B4234E1FFF716E003D2C45 /* CLLocation+Additions.m in Sources */,
 				38597A0E20031A7300D10275 /* XDDeviceManager.m in Sources */,
 				38597A442004C0B500D10275 /* XDMaqttClientManger.m in Sources */,
 				38B4234B1FFF6E5C003D2C45 /* XDClloctionManager.m in Sources */,
+				38FAD7D72005AF3F006A970E /* XDFenceManager.m in Sources */,
+				38FAD7F42005E95E006A970E /* XDFenceAnnotation.m in Sources */,
 				38B423391FFF67B9003D2C45 /* XDBaseViewController.m in Sources */,
 				38597A412004BF0300D10275 /* Constants.m in Sources */,
+				38FAD7E72005DC2A006A970E /* XDDeviceEditTipView.m in Sources */,
 				38597A162003374F00D10275 /* XDUserManager.m in Sources */,
 				38B4233C1FFF67F1003D2C45 /* XDBaseNavViewController.m in Sources */,
 				38597A372003557600D10275 /* XDCustomCalloutView.m in Sources */,
+				38FAD7F02005DC93006A970E /* XDEditFencePointAntion.m in Sources */,
 				38597A3E2004933C00D10275 /* XDAMapReGeocodeSearchRequest.m in Sources */,
 				38597A2820033F7700D10275 /* XDMqttMessage.m in Sources */,
 				38597A2620033F4300D10275 /* XDMsgDispose.m in Sources */,
@@ -573,8 +647,12 @@
 				38B423461FFF692C003D2C45 /* XDMonitoViewController.m in Sources */,
 				38B423021FFF65F3003D2C45 /* AppDelegate.m in Sources */,
 				38B423131FFF65F3003D2C45 /* main.m in Sources */,
+				38FAD7DA2005B12E006A970E /* XDCricleModel.m in Sources */,
 				38597A2C20033FC600D10275 /* FunBox.m in Sources */,
+				38FAD7E32005BFCD006A970E /* XDMAPolygon.m in Sources */,
+				38FAD7E02005B811006A970E /* XDCirlcle.m in Sources */,
 				38B4230B1FFF65F3003D2C45 /* XDTrafficPart01.xcdatamodeld in Sources */,
+				38FAD7F72005E9B7006A970E /* XDFenceEditAnnotation.m in Sources */,
 				38597A1C20033DD900D10275 /* EquipmentModel.m in Sources */,
 				38597A342003554700D10275 /* XDVehicleAnnotationView.m in Sources */,
 				38597A302003537D00D10275 /* XDMAPointAnnotation.m in Sources */,

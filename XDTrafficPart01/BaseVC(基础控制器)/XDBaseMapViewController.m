@@ -7,8 +7,7 @@
 //
 
 #import "XDBaseMapViewController.h"
-#import "XDMAPointAnnotation.h"
-#import "XDMqttMessage.h"
+
 @interface XDBaseMapViewController ()<XDVehicleAnnotationViewDelegate,MAMapViewDelegate>
 {
     NSMutableDictionary *_allDeviceDictionary;//所有的设备信息字典
@@ -23,8 +22,13 @@
      [super viewDidLoad];
      _annotationArray = [[NSMutableArray alloc] init];
      _allDeviceDictionary = [[NSMutableDictionary alloc] init];
-     self.view.backgroundColor = [UIColor whiteColor];
-     [self creatMapView];
+    if (_fenceArray==nil) {
+        _fenceArray = [[NSMutableArray alloc] init];
+    }
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self creatMapView];
+    [self requestFenceData];
+ 
 }
 - (void)creatMapView{
     [AMapServices sharedServices].enableHTTPS = YES;
@@ -50,6 +54,32 @@
     if ([annotation isKindOfClass:[MAUserLocation class]]) {
         return nil;
     }
+    //围栏点击出现的图标
+    else if ([annotation isKindOfClass:[XDEditFencePointAntion class]]){
+        XDEditFencePointAntion *selectation = (XDEditFencePointAntion *)annotation;
+        if (selectation.fenceStyle==NO) {
+            //仅作展示的图标
+            static NSString *editReuseIndetifier = @"editReuseIndetifier";
+            XDFenceAnnotation *annotationView = (XDFenceAnnotation*)[mapView dequeueReusableAnnotationViewWithIdentifier:editReuseIndetifier];
+            if (annotationView == nil){
+                annotationView = [[XDFenceAnnotation alloc] initWithAnnotation:annotation reuseIdentifier:editReuseIndetifier];
+            }
+            annotationView.name = selectation.titleStr;
+            return annotationView;
+        }
+        else{
+            //编辑围栏状态的图标
+            static NSString *editReuseIndetifierTow = @"editReuseIndetifierTow";
+            XDFenceEditAnnotation *annotationView = (XDFenceEditAnnotation*)[mapView dequeueReusableAnnotationViewWithIdentifier:editReuseIndetifierTow];
+            if (annotationView == nil){
+                annotationView = [[XDFenceEditAnnotation alloc] initWithAnnotation:annotation reuseIdentifier:editReuseIndetifierTow];
+            }
+            annotationView.indexNum =selectation.indexNum;
+            annotationView.fenceField.placeholder = selectation.titleStr;
+            return annotationView;
+        }
+    }
+    //地图上面的移动的图标
     else if ([annotation isKindOfClass:[XDMAPointAnnotation class]]){
         XDMAPointAnnotation *pointAnnotation2 = (XDMAPointAnnotation *)annotation;
         static NSString *customReuseIndetifier = @"customReuseIndetifier";
@@ -59,10 +89,40 @@
         }
         annotationView.modelObj = pointAnnotation2.model;
         annotationView.delegate = self;
-        if (_objectModel!=nil) {
-            annotationView.selected = YES;
-        }
         return annotationView;
+    }
+    return nil;
+}
+#pragma mark --------绘制围栏
+- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[XDCirlcle class]]){
+        MACircleRenderer *circleRenderer = [XDCirlcle creatRendererWith:overlay];
+        return circleRenderer;
+    }
+    if ([overlay isKindOfClass:[XDMAPolygon class]]){
+        XDMAPolygon *overlayObj =(XDMAPolygon *)overlay;
+        MAPolygonRenderer *polylineRenderer = [[MAPolygonRenderer alloc] initWithOverlay:overlay];
+        polylineRenderer.lineWidth    = 4.f;
+        if ([overlayObj.status isEqualToString:@"on"] == YES) {
+            polylineRenderer.strokeColor = [UIColor colorWithHexString:@"bf0000" withAlpha:1];
+            if (overlayObj.isColorStatus == NO) {
+                polylineRenderer.fillColor = [UIColor clearColor];
+            }
+            else{
+                polylineRenderer.fillColor = [UIColor colorWithHexString:@"FFA0A0" withAlpha:0.5];
+            }
+        }
+        else{
+            if (overlayObj.isColorStatus == NO) {
+                polylineRenderer.fillColor = [UIColor clearColor];
+            }
+            else{
+                polylineRenderer.fillColor = [UIColor colorWithHexString:@"#c0c0c0" withAlpha:0.5];
+            }
+            polylineRenderer.strokeColor = [UIColor colorWithHexString:@"#c0c0c0"];
+        }
+        return polylineRenderer;
     }
     return nil;
 }
@@ -77,7 +137,7 @@
 - (void)setObjectModel:(EquipmentModel *)objectModel{
     if (objectModel) {
         _objectModel = objectModel;
-        [self creatAnnotationPoint];
+        [self creatOneAnnotationPoint];
     }
     else{
         [[XDDeviceManager sharedManager]postDeviceListsuccess:^(NSDictionary *success) {
@@ -114,6 +174,22 @@
         [_bgMapView removeAnnotations:_annotationArray];
     }
 }
+#pragma mark 绘制单个的标点
+- (void)creatOneAnnotationPoint{
+    [_bgMapView setClearsContextBeforeDrawing:YES];
+    [_bgMapView removeAnnotations:_annotationArray];
+    [_annotationArray removeAllObjects];
+    CLLocationCoordinate2D point = _objectModel.location2D;
+    XDMAPointAnnotation *annotation = [[XDMAPointAnnotation alloc] init];
+    annotation.coordinate = point;
+    annotation.model = _objectModel;
+    [_bgMapView addAnnotation:annotation];
+    [_annotationArray addObject:annotation];
+    //设置地图缩放比例
+    [_bgMapView showAnnotations:_annotationArray animated:NO];
+    [_bgMapView setZoomLevel:15 atPivot:self.view.center animated:NO];
+}
+
 #pragma mark 设备发生位置移动 进行界面修改
 -(void)liveManagerDidReceiveMessage:(NSNotification *)notifi{
     XDMqttMessage * message = (XDMqttMessage *)notifi.object;
@@ -148,11 +224,65 @@
         }
     }
 }
+#pragma mark  围栏列表数据请求
+- (void)requestFenceData{
+    [[XDFenceManager sharedManager]postFenceDicSuccess:^(NSDictionary *success) {
+        [_bgMapView removeOverlays:_fenceArray];
+        [_fenceArray removeAllObjects];
+        for (int a=0; a<[XDFenceManager sharedManager].allFenceArray.count; a++) {
+            XDCricleModel *model = [XDFenceManager sharedManager].allFenceArray[a];
+            if ([model.shape isEqualToString:@"circle"]==YES) {
+                CLLocationCoordinate2D   point = CLLocationCoordinate2DMake(model.deviceLat, model.deviceLng);
+                XDCirlcle *circle = [XDCirlcle circleWithCenterCoordinate:point radius:[model.deviceRadius floatValue]];
+                if ([model.status isEqualToString:@"on"]==YES) {
+                    circle.status =@"on";
+                }
+                else{
+                    circle.status =@"off";
+                }
+                circle.fenceID = model.scopeId;
+                circle.indexNum =a;
+                circle.fenceName =model.scopeName;
+                [_bgMapView addOverlay: circle];
+                [_fenceArray addObject:circle];
+            }
+            else if ([model.shape isEqualToString:@"polygon"]==YES){
+                [self createBrokenLineWithArray:model.allPointlocationArray andStstus:model.status andName:model.scopeName andIndex:a andSpenceID:model.scopeId];
+            }
+        }
+        
+    } failure:^(NSError *failure) {
+        
+    }];
+}
+
+- (void)createBrokenLineWithArray:(NSArray *)dataParkLaneArr andStstus:(NSString *)status andName:(NSString *)scopeName andIndex:(int)indexNum andSpenceID:(NSString *)spenceID{
+    const int  Max  = (int)dataParkLaneArr.count;
+    CLLocationCoordinate2D *coors = malloc(Max *sizeof(CLLocationCoordinate2D));
+    for (int i = 0; i<dataParkLaneArr.count; i++) {
+        CLLocation *commonPolyLineCoords =dataParkLaneArr[i];
+        coors[i].latitude = commonPolyLineCoords.coordinate.latitude;
+        coors[i].longitude = commonPolyLineCoords.coordinate.longitude;
+    }
+    XDMAPolygon * commonPoly = [XDMAPolygon polygonWithCoordinates:coors count:dataParkLaneArr.count];
+    commonPoly.isCheck = YES;;
+    commonPoly.status =status;
+    commonPoly.polyLine =coors;
+    commonPoly.fenceName =scopeName;
+    commonPoly.fenceindexNum =indexNum;
+    commonPoly.fenceID =spenceID;
+    [_fenceArray addObject:commonPoly];
+    [self.bgMapView addOverlay:commonPoly];
+}
+
 #pragma mark 设备后位置信息的实时更改
 - (void)deviceMoveWithCLLocationCoordinate2D:(CLLocationCoordinate2D )coordinate andSpeedStr:(NSString *)speedStr andTopic:(NSString *)topic{
     
 }
 - (void)dealloc{
+
+//    UITableView *a ;
+//    UITableViewCell *cell = [a cellForRowAtIndexPath:<#(nonnull NSIndexPath *)#>]
     NSLog(@"-XDBaseMapViewController---- dealloc");
 }
 

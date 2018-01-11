@@ -19,31 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-//    self.view.backgroundColor = [UIColor orangeColor];
-//    XDDeviceManager * deviceManager = [XDDeviceManager sharedManager];
-//
-//    [deviceManager addObserver:self forKeyPath:@"allDeviceDictionary" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:@"AAAAA"];
-//}
-//- (void)didReceiveMemoryWarning {
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
-//
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    [[XDDeviceManager sharedManager].allDeviceDictionary setValue:@"111" forKey:@"1133"];
-//}
-//
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-//{
-   
     //设备移动
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(liveManagerDidReceiveMessage:) name:XDMoveReceiveMessageNotification object:nil];
 }
 
 -(void)liveManagerDidReceiveMessage:(NSNotification *)notifi{
 }
-
 
 - (void)dealloc{
     NSLog(@"----%s-dealloc-",__func__);

@@ -25,4 +25,6 @@
  每行都有两个地理位置
  */
 - (void)searchReGeocodeWithCoordinate:(CLLocationCoordinate2D)coordinate withIntIndex:(int)index andCellNum:(int)cellNum;
+/**判断点是否在为列表中*/
++(id)isIncludePointAtCoordinate:(CLLocationCoordinate2D)coordinate andShapeLine:(NSMutableArray *)fenceArray;
 @end

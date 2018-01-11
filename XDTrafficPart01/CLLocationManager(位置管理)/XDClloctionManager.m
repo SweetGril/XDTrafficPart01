@@ -8,6 +8,7 @@
 
 #import "XDClloctionManager.h"
 #import "XDAMapReGeocodeSearchRequest.h"
+#import "XDMAPolygon.h"
 static XDClloctionManager *_manager;
 /**位置管理类方法 CLLocation */
 @implementation XDClloctionManager
@@ -18,6 +19,35 @@ static XDClloctionManager *_manager;
     });
     return _manager;
 }
+/**判断点是否在为列表中*/
++(id)isIncludePointAtCoordinate:(CLLocationCoordinate2D)coordinate andShapeLine:(NSMutableArray *)fenceArray
+{
+    id selectShape;
+    int verifyNum =0;
+    for (int a=0; a<fenceArray.count; a++) {
+        id shape = fenceArray[a];
+        if ([shape isKindOfClass:[MACircle class]] ) {
+            MACircle *circle = (MACircle *)shape;
+            if (MACircleContainsCoordinate(coordinate, circle.coordinate, circle.radius)) {
+                verifyNum ++;
+                selectShape = circle;
+            }
+        }
+        else{
+            XDMAPolygon *polyline = (XDMAPolygon *)shape;
+            if (MAPolygonContainsCoordinate(coordinate, polyline.polyLine, polyline.pointCount)) {
+                verifyNum ++;
+                selectShape = polyline;
+            }
+        }
+    }
+    
+    if (verifyNum==1) {
+        return selectShape;
+    }
+    return nil;
+}
+
 - (void)searchReGeocodeWithCoordinate:(CLLocationCoordinate2D)coordinate withTopic:(NSString *)topicString
 {
     if (self.search==nil) {

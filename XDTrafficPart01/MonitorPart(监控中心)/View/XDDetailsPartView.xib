@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XDDetailsPartView">
+            <rect key="frame" x="0.0" y="0.0" width="86" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d81-1b-wKt">
+                    <rect key="frame" x="35" y="65" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="3uH-K6-ULu"/>
+                        <constraint firstAttribute="width" secondItem="d81-1b-wKt" secondAttribute="height" multiplier="1:1" id="ADU-OT-kTv"/>
+                    </constraints>
+                    <connections>
+                        <action selector="detailViewBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="3iE-xv-9eK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aef-KA-T97">
+                    <rect key="frame" x="35" y="10" width="45" height="45"/>
+                    <state key="normal" backgroundImage="location"/>
+                    <connections>
+                        <action selector="detailViewBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mv1-gA-HD3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="d81-1b-wKt" firstAttribute="top" secondItem="aef-KA-T97" secondAttribute="bottom" constant="10" id="1gv-l4-n3W"/>
+                <constraint firstItem="aef-KA-T97" firstAttribute="width" secondItem="d81-1b-wKt" secondAttribute="width" id="6lN-X6-uKX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="d81-1b-wKt" secondAttribute="bottom" constant="10" id="7CB-Il-YsB"/>
+                <constraint firstItem="aef-KA-T97" firstAttribute="leading" secondItem="d81-1b-wKt" secondAttribute="leading" id="Eb2-dS-oPn"/>
+                <constraint firstItem="aef-KA-T97" firstAttribute="height" secondItem="d81-1b-wKt" secondAttribute="height" id="fB6-dc-wAz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d81-1b-wKt" secondAttribute="trailing" constant="6" id="qg7-Nc-lgs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="historyBtn" destination="d81-1b-wKt" id="5MJ-eK-atd"/>
+                <outlet property="orientationBtn" destination="aef-KA-T97" id="1f5-a4-bjH"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="172"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="location" width="48" height="48"/>
+    </resources>
+</document>
